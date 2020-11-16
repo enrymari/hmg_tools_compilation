@@ -70,7 +70,7 @@ jobs:
       uses: srfrnk/current-time@master
       id: current-time
       with:
-        format: YYYY_MM_DD-HH
+        format: YYYYMMDD-HH
 
     - name: Upload Harbour to artifact
       env:
