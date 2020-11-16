@@ -3,7 +3,7 @@ name: Harbour binaries 32b MinGW 930
 on:
   push:
     branches:
-      - 'master'
+      - 'main'
 
 jobs:
   build:
