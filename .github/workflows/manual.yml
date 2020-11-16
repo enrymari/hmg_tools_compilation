@@ -67,43 +67,30 @@ jobs:
         set HB_BUILD_CONTRIB_DYN=yes
         set HB_BUILD_DYN=yes
         set HB_WITH_LIBHARU=c:\harbour\contrib\hbhpdf
-        set path=c:\mingw32\mingw32\bin;c:\program Files\OpenSSL-Win64\bin;%path%
-        win-make.exe
+        set path=c:\mingw32\mingw32\bin;c:\openssl\bin;c:\curl\bin;%path%
+        
+        :: win-make.exe
 
     - name: Create output folders
       shell: cmd
       run: |
         mkdir output
-
-        robocopy harbour\ output /E
-        if %ERRORLEVEL% EQU 1 set ERRORLEVEL=0
-        echo %ERRORLEVEL%
-        echo creating harbour binaries ErrorLevel = %ERRORLEVEL%
-
-        :: rmdir output\.git /S /Q
-        :: del output\.git* /S /Q
-        :: del output\os2-make.exe /S /Q
-        :: del output\dos-make.exe /S /Q
-        :: del output\win-make.exe /S /Q
-        :: del output\.travis.yml /S /Q
-        :: rmdir output\package /S /Q
-        :: rmdir output\debian /S /Q
-        :: rmdir output\config /S /Q
-        :: rmdir output\addons /S /Q
-        :: move output\bin\win\mingw\*.* output\bin
+        dir c:\openssl >dirs.txt
+        dir c:\curl >>dirs.txt
+        copy dirs.txt output\txt
 
     - name: Get current time
       uses: srfrnk/current-time@master
       id: current-time
       with:
-        format: YYYY_MM_DD
+        format: YYYY_MM_DD-HH
 
     - name: Upload Harbour to artifact
       env:
-         TIME: "${{ steps.current-time.outputs.formattedTime }}"
+         F_TIME: "${{ steps.current-time.outputs.formattedTime }}"
       uses: actions/upload-artifact@v2
       with:
-       name: hb32_mgw930_32b_${{ env.TIME }}
+       name: hb32_mgw930_32b_${{ env.F_TIME }}
        path: output
        
         
