@@ -26,7 +26,7 @@ jobs:
         Expand-Archive -LiteralPath C:\temp\OpenSSL-Win32.zip -DestinationPath C:\OpenSSL -Force
          (new-object System.Net.WebClient).DownloadFile('https://bitbucket.org/lorenzodla/mod_harbour_actions_resources/downloads/curl-7.54.0-win32-mingw.zip', 'C:\temp\curl-7.54.0-win32-mingw.zip')
         Expand-Archive -LiteralPath C:\temp\curl-7.54.0-win32-mingw.zip -DestinationPath C:\curl -Force
-        (new-object System.Net.WebClient).DownloadFile('https://bitbucket.org/lorenzodla/mod_harbour_actions_resources/downloads/acesdk.zip', 'C:\temp\acesdk.zip')
+         (new-object System.Net.WebClient).DownloadFile('https://bitbucket.org/lorenzodla/mod_harbour_actions_resources/downloads/acesdk.zip', 'C:\temp\acesdk.zip')
         Expand-Archive -LiteralPath C:\temp\acesdk.zip -DestinationPath C:\acesdk -Force
 
     - name: Compile Harbour
@@ -43,8 +43,8 @@ jobs:
         set HB_STATIC_OPENSSL=yes
         set HB_STATIC_CURL=yes
         set HB_COMPILER=mingw
-        set HB_BUILD_CONTRIB_DYN=no
-        set HB_BUILD_DYN=no
+        set HB_BUILD_CONTRIB_DYN=yes
+        set HB_BUILD_DYN=yes
         set HB_WITH_LIBHARU=c:\harbour\contrib\hbhpdf
         set path=c:\mingw32\mingw32\bin;c:\openssl\bin;c:\curl;%path%
         win-make.exe
@@ -53,12 +53,10 @@ jobs:
       shell: cmd
       run: |
         mkdir output
-
         robocopy harbour\ output /E
         if %ERRORLEVEL% EQU 1 set ERRORLEVEL=0
         echo %ERRORLEVEL%
         echo creating harbour binaries ErrorLevel = %ERRORLEVEL%
-
         rmdir output\.git /S /Q
         del output\.git* /S /Q
         del output\os2-make.exe /S /Q
