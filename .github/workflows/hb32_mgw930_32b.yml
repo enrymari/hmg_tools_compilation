@@ -23,11 +23,11 @@ jobs:
       run: |
         (new-object System.Net.WebClient).DownloadFile('https://bitbucket.org/lorenzodla/mod_harbour_actions_resources/downloads/mingw32.zip', 'C:\temp\mingw32.zip')
         Expand-Archive -LiteralPath C:\temp\mingw32.zip -DestinationPath C:\mingw32 -Force
-         (new-object System.Net.WebClient).DownloadFile('https://bitbucket.org/lorenzodla/mod_harbour_actions_resources/downloads/OpenSSL-Win32.zip', 'C:\temp\OpenSSL-Win32.zip')
+         (new-object System.Net.WebClient).DownloadFile('https://github.com/asistex/hmg_tools_compilation/raw/main/bin/OpenSSL-Win32.zip', 'C:\temp\OpenSSL-Win32.zip')
         Expand-Archive -LiteralPath C:\temp\OpenSSL-Win32.zip -DestinationPath C:\OpenSSL -Force
-         (new-object System.Net.WebClient).DownloadFile('https://bitbucket.org/lorenzodla/mod_harbour_actions_resources/downloads/curl-7.54.0-win32-mingw.zip', 'C:\temp\curl-7.54.0-win32-mingw.zip')
+         (new-object System.Net.WebClient).DownloadFile('https://github.com/asistex/hmg_tools_compilation/raw/main/bin/curl-7.54.0-win32-mingw.zip', 'C:\temp\curl-7.54.0-win32-mingw.zip')
         Expand-Archive -LiteralPath C:\temp\curl-7.54.0-win32-mingw.zip -DestinationPath C:\curl -Force
-         (new-object System.Net.WebClient).DownloadFile('https://bitbucket.org/lorenzodla/mod_harbour_actions_resources/downloads/acesdk.zip', 'C:\temp\acesdk.zip')
+         (new-object System.Net.WebClient).DownloadFile('https://github.com/asistex/hmg_tools_compilation/raw/main/bin/acesdk.zip', 'C:\temp\acesdk.zip')
         Expand-Archive -LiteralPath C:\temp\acesdk.zip -DestinationPath C:\acesdk -Force
 
     - name: Compile Harbour
@@ -71,11 +71,22 @@ jobs:
         rmdir output\config /S /Q
         rmdir output\addons /S /Q
         rmdir output\lib\win\mingw\.hbmk /S /Q
+        echo limpiar objects 0
         move output\bin\win\mingw\*.* output\bin
+        rmdir output\bin\win /S /Q
         echo mover harbour binaries ErrorLevel = %ERRORLEVEL%
 
+        echo limpiar objects 0-2
+        rmdir output\src\rtl\gtwin\obj /S /Q
+        rmdir output\src\rtl\gtwvt\obj /S /Q
+        echo limpiar objects 0-3
+        rmdir output\src\rtl\gtstd\obj /S /Q
+        rmdir output\src\rdd\usrrdd\rdds\obj /S /Q
+
         echo limpiar objects 1
-        rmdir output\lib\3rd\win\bcc /S /Q
+        move output\lib\3rd\win\mingw\libunicow*.* output\lib\win\mingw
+        rmdir output\lib\3rd /S /Q
+        echo limpiar objects 1-2
         rmdir output\src\vm\obj /S /Q
         echo limpiar objects 2
         rmdir output\src\rtl\obj /S /Q
@@ -90,7 +101,7 @@ jobs:
         rmdir output\src\lang\obj /S /Q
         rmdir output\src\hbextern\obj /S /Q
         echo limpiar objects 6
-        :: rmdir output\src\dynlib\obj /S /Q
+        rmdir output\src\dynlib\obj /S /Q
         rmdir output\src\debug\obj /S /Q
         echo limpiar objects 7
         rmdir output\src\compiler\obj /S /Q
@@ -129,6 +140,7 @@ jobs:
         :: rmdir output\utils\hbmk2\obj /S /Q
         :: rmdir output\utils\hbi18n\obj /S /Q
         echo fin limpiar objects
+
         if %ERRORLEVEL% EQU 1 set ERRORLEVEL=0
 
     - name: Get current time
