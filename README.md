@@ -10,6 +10,7 @@ YY-MM-DD-HH | changelog | obs |
 [17-04-19-00 ](https://github.com/asistex/hmg_tools_compilation/raw/main/curl-7.54.0-win32-mingw.zip) |  | `curl-7.54.0 win32-mingw` |
 [13-07-19-00 ](https://github.com/asistex/hmg_tools_compilation/raw/main/acesdk.zip) |  | `ads acesdk` |
 [12-01-28-00 ](https://github.com/asistex/hmg_tools_compilation/raw/main/aes.zip) |  | `aes` |
+[12-01-28-00 ](https://bitbucket.org/lorenzodla/mod_harbour_actions_resources/downloads/mingw32.zip) |  | `mingw 9.30` |
 
 
 
