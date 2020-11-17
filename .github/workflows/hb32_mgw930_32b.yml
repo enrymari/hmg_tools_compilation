@@ -74,47 +74,59 @@ jobs:
         move output\bin\win\mingw\*.* output\bin
         echo mover harbour binaries ErrorLevel = %ERRORLEVEL%
 
-        echo limpiar objects
+        echo limpiar objects 1
         rmdir output\lib\3rd\win\bcc /S /Q
         rmdir output\src\vm\obj /S /Q
         rmdir output\src\rtl\obj /S /Q
         rmdir output\src\rdd\obj /S /Q
+
+        echo limpiar objects 2
         rmdir output\src\pp\obj /S /Q
         rmdir output\src\nortl\obj /S /Q
         rmdir output\src\main\obj /S /Q
+
+        echo limpiar objects 3
         rmdir output\src\macro\obj /S /Q
         rmdir output\src\lang\obj /S /Q
         rmdir output\src\hbextern\obj /S /Q
         rmdir output\src\dynlib\obj /S /Q
+
+        echo limpiar objects 4
         rmdir output\src\debug\obj /S /Q
         rmdir output\src\compiler\obj /S /Q
         rmdir output\src\common\obj /S /Q
         rmdir output\src\codepage\obj /S /Q
 
+        echo limpiar objects 5
         rmdir output\src\3rd\zlib\obj /S /Q
         rmdir output\src\3rd\tiff\obj /S /Q
         rmdir output\src\3rd\png\obj /S /Q
+        echo limpiar objects 6
         rmdir output\src\3rd\pcre\obj /S /Q
         rmdir output\src\3rd\jpeg\obj /S /Q
 
         rmdir output\src\rdd\usrrdd\obj /S /Q
         rmdir output\src\rdd\nulsys\obj /S /Q
+        echo limpiar objects 7
         rmdir output\src\rdd\hsx\obj /S /Q
         rmdir output\src\rdd\hbsix\obj /S /Q
         rmdir output\src\rdd\dbfntx\obj /S /Q
         rmdir output\src\rdd\dbfnsx\obj /S /Q
+        echo limpiar objects 8
         rmdir output\src\rdd\dbffpt\obj /S /Q
         rmdir output\src\rdd\dbfcdx\obj /S /Q
 
-        rmdir output\src\vm\vmmt\obj /S /Q
+        :: rmdir output\src\vm\vmmt\obj /S /Q
         rmdir output\src\vm\mainwin\obj /S /Q
         rmdir output\src\vm\mainstd\obj /S /Q
+        echo limpiar objects 9
         rmdir output\src\vm\maindllp\obj /S /Q
         rmdir output\src\vm\maindllh\obj /S /Q
 
-        rmdir output\utils\hbtest\obj /S /Q
-        rmdir output\utils\hbmk2\obj /S /Q
-        rmdir output\utils\hbi18n\obj /S /Q
+        :: rmdir output\utils\hbtest\obj /S /Q
+        :: rmdir output\utils\hbmk2\obj /S /Q
+        :: rmdir output\utils\hbi18n\obj /S /Q
+        echo fin limpiar objects
 
     - name: Get current time
       uses: srfrnk/current-time@master
