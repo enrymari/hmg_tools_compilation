@@ -15,7 +15,7 @@ YY-MM-DD-HH | info | obs |
 [17-04-19-00 ](https://github.com/asistex/hmg_tools_compilation/raw/main/bin/curl-7.73.0_1-win64-mingw.zip) | to do: link with harbour | [`curl-7.73.0_1 -win64-mingw`](https://github.com/asistex/hmg_tools_compilation/raw/main/bin/curl-7.73.0_1-win64-mingw.zip) |
 [17-04-19-00 ](https://github.com/asistex/hmg_tools_compilation/raw/main/bin/curl-7.73.0_1-win32-mingw.zip) | to do: link with harbour | [`curl-7.73.0_1 -win32-mingw`](https://github.com/asistex/hmg_tools_compilation/raw/main/bin/curl-7.73.0_1-win32-mingw.zip) |
 [17-04-19-00 ](https://github.com/asistex/hmg_tools_compilation/raw/main/bin/curl-7.54.0-win32-mingw.zip) |  | [`curl-7.54.0 -win32-mingw`](https://github.com/asistex/hmg_tools_compilation/raw/main/bin/curl-7.54.0-win32-mingw.zip) |
-[20-11-19-15 ](https://github.com/asistex/hmg_tools_compilation/raw/main/bin/hmg_on_github_uni_32b_20201119-15.zip) | All HMG libs without Mingw, without Harbour bins | [`HMG lastest on github`](https://github.com/asistex/hmg_tools_compilation/raw/main/bin/hmg_on_github_uni_32b_20201119-15.zip) ![HMG 32bit unicode](https://github.com/asistex/hmg_tools_compilation/workflows/HMG%2032bit%20unicode/badge.svg) |
+[20-11-19-15 ](https://github.com/asistex/hmg_tools_compilation/raw/main/bin/hmg_on_github_uni_32b_20201119-15.zip) | HMG libs without Mingw binaries, without Harbour binaries | [`HMG lastest on github`](https://github.com/asistex/hmg_tools_compilation/raw/main/bin/hmg_on_github_uni_32b_20201119-15.zip) ![HMG 32bit unicode](https://github.com/asistex/hmg_tools_compilation/workflows/HMG%2032bit%20unicode/badge.svg) |
 
 
 
