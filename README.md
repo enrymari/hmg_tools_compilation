@@ -1,3 +1,5 @@
+[![Percentage of issues still open](http://isitmaintained.com/badge/open/asistex/hmg_tools_compilation.svg)](http://isitmaintained.com/project/asistex/hmg_tools_compilation "Percentage of issues still open")
+
 ### HMG - Harbour
 ## Tools to compile
 ---
@@ -16,6 +18,42 @@ YY-MM-DD-HH | info | obs |
 [17-04-19-00 ](https://github.com/asistex/hmg_tools_compilation/raw/main/bin/curl-7.73.0_1-win32-mingw.zip) | to do: link with harbour | [`curl-7.73.0_1 -win32-mingw`](https://github.com/asistex/hmg_tools_compilation/raw/main/bin/curl-7.73.0_1-win32-mingw.zip) |
 [17-04-19-00 ](https://github.com/asistex/hmg_tools_compilation/raw/main/bin/curl-7.54.0-win32-mingw.zip) |  | [`curl-7.54.0 -win32-mingw`](https://github.com/asistex/hmg_tools_compilation/raw/main/bin/curl-7.54.0-win32-mingw.zip) |
 [20-11-19-15 ](https://github.com/asistex/hmg_tools_compilation/raw/main/bin/hmg_on_github_uni_32b_20201119-15.zip) | HMG libs without Mingw binaries, without Harbour binaries | [`HMG lastest on github`](https://github.com/asistex/hmg_tools_compilation/raw/main/bin/hmg_on_github_uni_32b_20201119-15.zip) ![HMG 32bit unicode](https://github.com/asistex/hmg_tools_compilation/workflows/HMG%2032bit%20unicode/badge.svg) |
+[20-11-20-18 ](https://github.com/asistex/hmg_tools_compilation/raw/main/bin/hb32_curl_ssl_mgw93_32b_20201120-18.zip) | Harbour binaries + dlls + curl 7.73 + ssl 1.1.1 | [`Harbour + curl 7.73 + ssl 1.1.1`](https://github.com/asistex/hmg_tools_compilation/raw/main/bin/hb32_curl_ssl_mgw93_32b_20201120-18.zip) |
 
+---
+If you want to collaborate or if you find a problem or bug report, open an **`Issue`**
 
+---
+## notes
+```
+   curl 7.73.0_1 was built and statically linked with Opn SSL 1.1.1h
+   https://github.com/curl/curl-for-win
+   https://curl.se/windows/
+   some files:
+   - libcurl.dll.a
+   - libcurl.a
+   - libcurl.dll
+   - libcurl.def
+   - curl.exe
 
+   opn ssl 1.1.1
+   some files:
+   - libssl.dll.a
+   - libssl.a
+   - libcrypto.dll.a
+   - libcrypto.a
+   - libssl-1_1.dll
+   - libcrypto-1_1.dll
+   - openssl.exe
+
+```
+
+---
+# Guarantee and Liability
+
+`This software, including resulting binaries is provided "AS IS", without any kind of warranty, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose and non-infringement. in no event shall the authors be liable for any claim, damages or other liability, whether in an action of contract or otherwise, arising from the use of this software or other dealings in the software.`
+
+`Information in this document is subject to change without notice and does not represent or imply any future commitment by the participants of the project.`
+
+`If you are not agree with this  notice, then don't use this software.`
+---
