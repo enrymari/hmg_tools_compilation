@@ -11,14 +11,17 @@ YY-MM-DD-HH | info | obs |
 [13-07-19-00 ](https://github.com/asistex/hmg_tools_compilation/raw/main/bin/acesdk.zip) |  | [`ads acesdk`](https://github.com/asistex/hmg_tools_compilation/raw/main/bin/acesdk.zip) |
 [12-01-28-00 ](https://github.com/asistex/hmg_tools_compilation/raw/main/bin/aes.zip) |  | [`aes`](https://github.com/asistex/hmg_tools_compilation/raw/main/bin/aes.zip) |
 [12-01-28-00 ](https://bitbucket.org/lorenzodla/mod_harbour_actions_resources/downloads/mingw32.zip) | from mod_harbour | [`mingw 9.30`](https://bitbucket.org/lorenzodla/mod_harbour_actions_resources/downloads/mingw32.zip)
-[20-09-22-00 ](https://github.com/asistex/hmg_tools_compilation/raw/main/bin/openssl-1.1.1h_1-win64-mingw.zip) | to do: link with harbour | [`openssl-1.1.1h_1 -win64-mingw`](https://github.com/asistex/hmg_tools_compilation/raw/main/bin/openssl-1.1.1h_1-win64-mingw.zip) |
-[20-09-22-00 ](https://github.com/asistex/hmg_tools_compilation/raw/main/bin/openssl-1.1.1h_1-win32-mingw.zip) | to do: link with harbour | [`openssl-1.1.1h_1 -win32-mingw`](https://github.com/asistex/hmg_tools_compilation/raw/main/bin/openssl-1.1.1h_1-win32-mingw.zip) |
+[20-09-22-00 ](https://github.com/asistex/hmg_tools_compilation/raw/main/bin/openssl-1.1.1h_1-win64-mingw.zip) | to do: harbour wrapers | [`openssl-1.1.1h_1 -win64-mingw`](https://github.com/asistex/hmg_tools_compilation/raw/main/bin/openssl-1.1.1h_1-win64-mingw.zip) |
+[20-09-22-00 ](https://github.com/asistex/hmg_tools_compilation/raw/main/bin/openssl-1.1.1h_1-win32-mingw.zip) | to do: harbour wrapers | [`openssl-1.1.1h_1 -win32-mingw`](https://github.com/asistex/hmg_tools_compilation/raw/main/bin/openssl-1.1.1h_1-win32-mingw.zip) |
 [16-04-29-00 ](https://github.com/asistex/hmg_tools_compilation/raw/main/bin/OpenSSL-Win32.zip) |  | [`openssl-win32`](https://github.com/asistex/hmg_tools_compilation/raw/main/bin/OpenSSL-Win32.zip) |
-[17-04-19-00 ](https://github.com/asistex/hmg_tools_compilation/raw/main/bin/curl-7.73.0_1-win64-mingw.zip) | to do: link with harbour | [`curl-7.73.0_1 -win64-mingw`](https://github.com/asistex/hmg_tools_compilation/raw/main/bin/curl-7.73.0_1-win64-mingw.zip) |
-[17-04-19-00 ](https://github.com/asistex/hmg_tools_compilation/raw/main/bin/curl-7.73.0_1-win32-mingw.zip) | to do: link with harbour | [`curl-7.73.0_1 -win32-mingw`](https://github.com/asistex/hmg_tools_compilation/raw/main/bin/curl-7.73.0_1-win32-mingw.zip) |
+[17-04-19-00 ](https://github.com/asistex/hmg_tools_compilation/raw/main/bin/curl-7.73.0_1-win64-mingw.zip) | to do: harbour wrapers | [`curl-7.73.0_1 -win64-mingw`](https://github.com/asistex/hmg_tools_compilation/raw/main/bin/curl-7.73.0_1-win64-mingw.zip) |
+[17-04-19-00 ](https://github.com/asistex/hmg_tools_compilation/raw/main/bin/curl-7.73.0_1-win32-mingw.zip) | to do: harbour wrapers | [`curl-7.73.0_1 -win32-mingw`](https://github.com/asistex/hmg_tools_compilation/raw/main/bin/curl-7.73.0_1-win32-mingw.zip) |
 [17-04-19-00 ](https://github.com/asistex/hmg_tools_compilation/raw/main/bin/curl-7.54.0-win32-mingw.zip) |  | [`curl-7.54.0 -win32-mingw`](https://github.com/asistex/hmg_tools_compilation/raw/main/bin/curl-7.54.0-win32-mingw.zip) |
 [20-11-19-15 ](https://github.com/asistex/hmg_tools_compilation/raw/main/bin/hmg_on_github_uni_32b_20201119-15.zip) | HMG libs without Mingw binaries, without Harbour binaries | [`HMG lastest on github`](https://github.com/asistex/hmg_tools_compilation/raw/main/bin/hmg_on_github_uni_32b_20201119-15.zip) ![HMG 32bit unicode](https://github.com/asistex/hmg_tools_compilation/workflows/HMG%2032bit%20unicode/badge.svg) |
 [20-11-20-18 ](https://github.com/asistex/hmg_tools_compilation/raw/main/bin/hb32_curl_ssl_mgw93_32b_20201120-18.zip) | Harbour binaries + dlls + curl 7.73 + ssl 1.1.1 | [`Harbour + curl 7.73 + ssl 1.1.1`](https://github.com/asistex/hmg_tools_compilation/raw/main/bin/hb32_curl_ssl_mgw93_32b_20201120-18.zip) |
+
+[20-11-24-11 ](https://github.com/asistex/hmg_tools_compilation/raw/main/bin/hb32_mgw102_32b_20201124-11.zip) | Harbour binaries compiled with Mingw 10.2 | [`Harbour mingw 10.2`](https://github.com/asistex/hmg_tools_compilation/raw/main/bin/hb32_mgw102_32b_20201124-11.zip) ![HMG 32bit unicode](https://github.com/asistex/hmg_tools_compilation/workflows/HMG%2032bit%20unicode/badge.svg) |
+[20-11-24-15 ](https://github.com/asistex/hmg_tools_compilation/raw/main/bin/hmg_on_github_uni_32b_20201119-15.zip) | HMG libs without Mingw binaries, without Harbour binaries | [`HMG lastest on github`](https://github.com/asistex/hmg_tools_compilation/raw/main/bin/hmg_on_github_uni_32b_20201119-15.zip) ![HMG 32bit unicode](https://github.com/asistex/hmg_tools_compilation/workflows/HMG%2032bit%20unicode/badge.svg) |
 
 ---
 If you want to collaborate or if you find a problem or bug report, open an **`Issue`**
@@ -56,4 +59,5 @@ If you want to collaborate or if you find a problem or bug report, open an **`Is
 `Information in this document is subject to change without notice and does not represent or imply any future commitment by the participants of the project.`
 
 `If you are not agree with this  notice, then don't use this software.`
+
 ---
