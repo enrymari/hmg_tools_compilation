@@ -52,7 +52,9 @@ If you want to collaborate or if you find a problem or bug report, open an **`Is
 ```
 
 ---
-# Guarantee and Liability
+# License MIT
+
+### Guarantee and Liability
 
 `This software, including resulting binaries is provided "AS IS", without any kind of warranty, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose and non-infringement. in no event shall the authors be liable for any claim, damages or other liability, whether in an action of contract or otherwise, arising from the use of this software or other dealings in the software.`
 
