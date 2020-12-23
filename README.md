@@ -21,7 +21,16 @@ YY-MM-DD-HH | info | obs |
 [20-11-20-18 ](https://github.com/asistex/hmg_tools_compilation/raw/main/bin/hb32_curl_ssl_mgw93_32b_20201120-18.zip) | Harbour binaries + dlls + curl 7.73 + ssl 1.1.1 | [`Harbour + curl 7.73 + ssl 1.1.1`](https://github.com/asistex/hmg_tools_compilation/raw/main/bin/hb32_curl_ssl_mgw93_32b_20201120-18.zip) |
 [20-11-24-11 ](https://github.com/asistex/hmg_tools_compilation/raw/main/bin/hb32_mgw102_32b_20201124-11.zip) | Harbour binaries compiled with Mingw 10.2 | [`Harbour mingw 10.2`](https://github.com/asistex/hmg_tools_compilation/raw/main/bin/hb32_mgw102_32b_20201124-11.zip) ![Harbour bins 32b MinGW 10.2](https://github.com/asistex/ighoo/workflows/Harbour%20bins,dlls,curl,ssl%2032b%20MinGW%2010.2/badge.svg) |
 [20-11-24-15 ](https://github.com/asistex/hmg_tools_compilation/raw/main/bin/hmg_on_github_uni_32b_mgw102_20201124-12.zip) | HMG libs without Mingw binaries, without Harbour binaries. Compiled with migw 10.2 | [`HMG lastest on github`](https://github.com/asistex/hmg_tools_compilation/raw/main/bin/hmg_on_github_uni_32b_mgw102_20201124-12.zip) ![HMG 32bit unicode Mingw 102](https://github.com/asistex/hmg_tools_compilation/workflows/HMG%2032bit%20unicode%20Mingw%20102/badge.svg) |
-[20-10-25-00 ](https://github.com/brechtsanders/winlibs_mingw/releases/download/10.2.0-11.0.0-9.0.0-r3/winlibs-i686-posix-dwarf-gcc-10.2.0-llvm-11.0.0-mingw-w64-8.0.0-r3.zip) | from winlibs_mingw | [`mingw 10.2`](https://github.com/brechtsanders/winlibs_mingw/releases/download/10.2.0-11.0.0-9.0.0-r3/winlibs-i686-posix-dwarf-gcc-10.2.0-llvm-11.0.0-mingw-w64-8.0.0-r3.zip)
+[20-12-18-00 ](https://github.com/brechtsanders/winlibs_mingw/releases/download/10.2.0-11.0.0-8.0.0-r5/winlibs-i686-posix-dwarf-gcc-10.2.0-llvm-11.0.0-mingw-w64-8.0.0-r5.zip) | from winlibs_mingw | [`mingw version gcc-10.2.0 llvm-11.0.0 mingw-w64-8.0.0-r5`](https://github.com/brechtsanders/winlibs_mingw/releases/download/10.2.0-11.0.0-8.0.0-r5/winlibs-i686-posix-dwarf-gcc-10.2.0-llvm-11.0.0-mingw-w64-8.0.0-r5.zip)
+[20-12-23-18 ](https://github.com/asistex/hmg_tools_compilation/raw/main/bin/hb32_mgw102_32b_20201223-18.zip) | Harbour 32 binaries compiled with Mingw 10.2 | [`Harbour 32 mingw 10.2`](https://github.com/asistex/hmg_tools_compilation/raw/main/bin/hb32_mgw102_32b_20201223-18.zip) ![Harbour 32 MinGW 102 32b](https://github.com/asistex/hmg_tools_compilation/workflows/Harbour%2032%20MinGW%20102%2032b/badge.svg) |
+
+Harbour 34 vszakats (Viktor Szakats)
+
+YY-MM-DD-HH | info | obs |
+--- | --- | --- |
+[20-12-23-16 ](https://github.com/asistex/hmg_tools_compilation/raw/main/bin/hb34_mgw102_32b_20201223-16.zip) | Harbour 34 binaries compiled with Mingw 10.2 | [`Harbour 32 mingw 10.2`](https://github.com/asistex/hmg_tools_compilation/raw/main/bin/hb34_mgw102_32b_20201223-16.zip) |
+[20-11-24-15 ](https://github.com/asistex/hmg_tools_compilation/raw/main/bin/hmg_on_github_uni_32b_mgw102_20201124-12.zip) | HMG 35 libs without Mingw binaries, without Harbour binaries. Compiled with mingw version gcc-10.2.0 llvm-11.0.0 mingw-w64-8.0.0-r5 | [`HMG lastest on github`](https://github.com/asistex/hmg_tools_compilation/raw/main/bin/hmg_on_github_uni_32b_mgw102_20201124-12.zip)  |
+
 
 ---
 If you want to collaborate or if you find a problem or bug report, open an **`Issue`**
