@@ -73,104 +73,106 @@ jobs:
         del output\os2-make.exe /S /Q
         del output\dos-make.exe /S /Q
         del output\win-make.exe /S /Q
+        echo ------ 001
         del output\.travis.yml /S /Q
+        echo ------ 0
         rmdir output\package /S /Q
-        if %ERRORLEVEL% EQU 1 echo ------ 1
+        echo ------ 1
         rmdir output\debian /S /Q
-        if %ERRORLEVEL% EQU 1 echo ------ 2
+        echo ------ 2
         rmdir output\config /S /Q
-        if %ERRORLEVEL% EQU 1 echo ------ 3
+        echo ------ 3
         rmdir output\addons /S /Q
-        if %ERRORLEVEL% EQU 1 echo ------ 4
+        echo ------ 4
         rmdir output\lib\win\mingw\.hbmk /S /Q
         echo limpiar objects
-        if %ERRORLEVEL% EQU 1 echo ------ 5
+        echo ------ 5
         move output\bin\win\mingw\*.* output\bin
-        if %ERRORLEVEL% EQU 1 echo ------ 6
+        echo ------ 6
         rmdir output\bin\win /S /Q
-        if %ERRORLEVEL% EQU 1 echo ------ 7
+        echo ------ 7
         rmdir output\src\rtl\gtwin\obj /S /Q
-        if %ERRORLEVEL% EQU 1 echo ------ 8
+        echo ------ 8
         rmdir output\src\rtl\gtwvt\obj /S /Q
-        if %ERRORLEVEL% EQU 1 echo ------ 9
+        echo ------ 9
         rmdir output\src\rtl\gtstd\obj /S /Q
-        if %ERRORLEVEL% EQU 1 echo ------ 10
+        echo ------ 10
         rmdir output\src\rdd\usrrdd\rdds\obj /S /Q
-        if %ERRORLEVEL% EQU 1 echo ------ 11
+        echo ------ 11
         move output\lib\3rd\win\mingw\libunicow*.* output\lib\win\mingw
-        if %ERRORLEVEL% EQU 1 echo ------ 12
+        echo ------ 12
         rmdir output\lib\3rd /S /Q
-        if %ERRORLEVEL% EQU 1 echo ------ 13
+        echo ------ 13
         rmdir output\src\vm\obj /S /Q
-        if %ERRORLEVEL% EQU 1 echo ------ 14
+        echo ------ 14
         rmdir output\src\rtl\obj /S /Q
-        if %ERRORLEVEL% EQU 1 echo ------ 15
+        echo ------ 15
         rmdir output\src\rdd\obj /S /Q
-        if %ERRORLEVEL% EQU 1 echo ------ 16
+        echo ------ 16
         rmdir output\src\pp\obj /S /Q
-        if %ERRORLEVEL% EQU 1 echo ------ 17
+        echo ------ 17
         rmdir output\src\nortl\obj /S /Q
-        if %ERRORLEVEL% EQU 1 echo ------ 18
+        echo ------ 18
         rmdir output\src\main\obj /S /Q
-        if %ERRORLEVEL% EQU 1 echo ------ 19
+        echo ------ 19
         rmdir output\src\macro\obj /S /Q
-        if %ERRORLEVEL% EQU 1 echo ------ 20
+        echo ------ 20
         rmdir output\src\lang\obj /S /Q
-        if %ERRORLEVEL% EQU 1 echo ------ 21
+        echo ------ 21
         rmdir output\src\hbextern\obj /S /Q
-        if %ERRORLEVEL% EQU 1 echo ------ 22
+        echo ------ 22
         :: rmdir output\src\dynlib\obj /S /Q
-        if %ERRORLEVEL% EQU 1 echo ------ 23
+        echo ------ 23
         rmdir output\src\debug\obj /S /Q
-        if %ERRORLEVEL% EQU 1 echo ------ 24
+        echo ------ 24
         rmdir output\src\compiler\obj /S /Q
-        if %ERRORLEVEL% EQU 1 echo ------ 25
+        echo ------ 25
         rmdir output\src\common\obj /S /Q
-        if %ERRORLEVEL% EQU 1 echo ------ 26
+        echo ------ 26
         rmdir output\src\codepage\obj /S /Q
-        if %ERRORLEVEL% EQU 1 echo ------ 27
+        echo ------ 27
         rmdir output\src\3rd\zlib\obj /S /Q
-        if %ERRORLEVEL% EQU 1 echo ------ 28
+        echo ------ 28
         rmdir output\src\3rd\tiff\obj /S /Q
-        if %ERRORLEVEL% EQU 1 echo ------ 29
+        echo ------ 29
         rmdir output\src\3rd\png\obj /S /Q
-        if %ERRORLEVEL% EQU 1 echo ------ 30
+        echo ------ 30
         rmdir output\src\3rd\pcre\obj /S /Q
-        if %ERRORLEVEL% EQU 1 echo ------ 31
+        echo ------ 31
         rmdir output\src\3rd\jpeg\obj /S /Q
-        if %ERRORLEVEL% EQU 1 echo ------ 32
+        echo ------ 32
         rmdir output\src\rdd\usrrdd\obj /S /Q
-        if %ERRORLEVEL% EQU 1 echo ------ 33
+        echo ------ 33
         rmdir output\src\rdd\nulsys\obj /S /Q
-        if %ERRORLEVEL% EQU 1 echo ------ 34
+        echo ------ 34
         rmdir output\src\rdd\hsx\obj /S /Q
-        if %ERRORLEVEL% EQU 1 echo ------ 35
+        echo ------ 35
         rmdir output\src\rdd\hbsix\obj /S /Q
-        if %ERRORLEVEL% EQU 1 echo ------ 36
+        echo ------ 36
         rmdir output\src\rdd\dbfntx\obj /S /Q
-        if %ERRORLEVEL% EQU 1 echo ------ 37
+        echo ------ 37
         rmdir output\src\rdd\dbfnsx\obj /S /Q
-        if %ERRORLEVEL% EQU 1 echo ------ 38
+        echo ------ 38
         rmdir output\src\rdd\dbffpt\obj /S /Q
-        if %ERRORLEVEL% EQU 1 echo ------ 39
+        echo ------ 39
         rmdir output\src\rdd\dbfcdx\obj /S /Q
-        if %ERRORLEVEL% EQU 1 echo ------ 40
+        echo ------ 40
         rmdir output\src\vm\vmmt\obj /S /Q
-        if %ERRORLEVEL% EQU 1 echo ------ 41
+        echo ------ 41
         rmdir output\src\vm\mainwin\obj /S /Q
-        if %ERRORLEVEL% EQU 1 echo ------ 42
+        echo ------ 42
         rmdir output\src\vm\mainstd\obj /S /Q
-        if %ERRORLEVEL% EQU 1 echo ------ 43
+        echo ------ 43
         rmdir output\src\vm\maindllp\obj /S /Q
-        if %ERRORLEVEL% EQU 1 echo ------ 44
+        echo ------ 44
         rmdir output\src\vm\maindllh\obj /S /Q
-        if %ERRORLEVEL% EQU 1 echo ------ 45
+        echo ------ 45
         rmdir output\utils\hbtest\obj /S /Q
-        if %ERRORLEVEL% EQU 1 echo ------ 46
+        echo ------ 46
         rmdir output\utils\hbmk2\obj /S /Q
-        if %ERRORLEVEL% EQU 1 echo ------ 47
+        echo ------ 47
         rmdir output\utils\hbi18n\obj /S /Q
-        if %ERRORLEVEL% EQsU 1 echo ------ 48
+        echo ------ 48
         echo fin limpiar objects
 
         if %ERRORLEVEL% EQU 1 set ERRORLEVEL=0
