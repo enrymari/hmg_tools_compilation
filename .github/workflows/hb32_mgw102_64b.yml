@@ -84,10 +84,10 @@ jobs:
         echo ------ 3
         rmdir output\addons /S /Q
         echo ------ 4
-        rmdir output\lib\win\mingw\.hbmk /S /Q
+        :: rmdir output\lib\win\mingw\.hbmk /S /Q
         echo limpiar objects
         echo ------ 5
-        move output\bin\win\mingw\*.* output\bin
+        :: move output\bin\win\mingw\*.* output\bin
         echo ------ 6
         rmdir output\bin\win /S /Q
         echo ------ 7
@@ -99,7 +99,7 @@ jobs:
         echo ------ 10
         rmdir output\src\rdd\usrrdd\rdds\obj /S /Q
         echo ------ 11
-        move output\lib\3rd\win\mingw\libunicow*.* output\lib\win\mingw
+        :: move output\lib\3rd\win\mingw\libunicow*.* output\lib\win\mingw
         echo ------ 12
         rmdir output\lib\3rd /S /Q
         echo ------ 13
