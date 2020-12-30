@@ -41,7 +41,7 @@ jobs:
         :: set HB_WITH_ADS=c:\acesdk
         set HB_STATIC_OPENSSL=yes
         set HB_STATIC_CURL=yes
-        set HB_COMPILER=mingw
+        set HB_COMPILER=mingw64
         set HB_BUILD_CONTRIB_DYN=yes
         set HB_BUILD_DYN=yes
         set HB_WITH_LIBHARU=c:\harbour\contrib\hbhpdf
