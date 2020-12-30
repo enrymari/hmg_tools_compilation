@@ -24,7 +24,7 @@ jobs:
         (new-object System.Net.WebClient).DownloadFile('https://github.com/brechtsanders/winlibs_mingw/releases/download/10.2.0-11.0.0-8.0.0-r5/winlibs-x86_64-posix-seh-gcc-10.2.0-llvm-11.0.0-mingw-w64-8.0.0-r5.zip', 'C:\temp\mingw.zip')
         Expand-Archive -LiteralPath C:\temp\mingw.zip -DestinationPath C:\mingw -Force
         (new-object System.Net.WebClient).DownloadFile('https://curl.se/windows/dl-7.74.0_2/curl-7.74.0_2-win64-mingw.zip', 'C:\temp\curl774.zip')
-        Expand-Archive -LiteralPath C:\temp\curl773.zip -DestinationPath C:\curl774 -Force
+        Expand-Archive -LiteralPath C:\temp\curl774.zip -DestinationPath C:\curl774 -Force
         (new-object System.Net.WebClient).DownloadFile('https://curl.se/windows/dl-7.74.0_2/openssl-1.1.1i_2-win64-mingw.zip', 'C:\temp\openssl_111.zip')
         Expand-Archive -LiteralPath C:\temp\openssl_111.zip -DestinationPath C:\openssl_111 -Force
 
