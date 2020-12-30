@@ -41,7 +41,7 @@ jobs:
         :: set HB_WITH_ADS=c:\acesdk
         set HB_STATIC_OPENSSL=yes
         set HB_STATIC_CURL=yes
-        set HB_COMPILER=mingw
+        set HB_COMPILER=mingw64
         set HB_BUILD_CONTRIB_DYN=yes
         set HB_BUILD_DYN=yes
         set HB_WITH_LIBHARU=c:\harbour\contrib\hbhpdf
@@ -78,15 +78,15 @@ jobs:
         rmdir output\debian /S /Q
         rmdir output\config /S /Q
         rmdir output\addons /S /Q
-        rmdir output\lib\win\mingw\.hbmk /S /Q
+        rmdir output\lib\win\mingw64\.hbmk /S /Q
         echo limpiar objects
-        move output\bin\win\mingw\*.* output\bin
+        move output\bin\win\mingw64\*.* output\bin
         rmdir output\bin\win /S /Q
         rmdir output\src\rtl\gtwin\obj /S /Q
         rmdir output\src\rtl\gtwvt\obj /S /Q
         rmdir output\src\rtl\gtstd\obj /S /Q
         rmdir output\src\rdd\usrrdd\rdds\obj /S /Q
-        move output\lib\3rd\win\mingw\libunicow*.* output\lib\win\mingw
+        :: move output\lib\3rd\win\mingw64\libunicow*.* output\lib\win\mingw
         rmdir output\lib\3rd /S /Q
         rmdir output\src\vm\obj /S /Q
         rmdir output\src\rtl\obj /S /Q
