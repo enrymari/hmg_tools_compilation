@@ -34,6 +34,14 @@ YY-MM-DD-HH | info | obs |
 
 
 
+HMG 35 unicode 64 bits
+
+YY-MM-DD-HH | info | obs |
+--- | --- | --- |
+[20-12-30-17 ](https://github.com/asistex/hmg_tools_compilation/raw/main/bin/hb32_mgw102r5_64b_20201230-17.zip) | Harbour 32 binaries Compiled with mingw version x86_64-posix-seh gcc-10.2.0-llvm 11.0.0-mingw-w64-8.0.0-r5 | [harbour32 64 bits ](https://github.com/asistex/hmg_tools_compilation/raw/main/bin/hb32_mgw102r5_64b_20201230-17.zip)  ![hb32 mgw102r5 64b](https://github.com/asistex/hmg_tools_compilation/workflows/hb32%20mgw102r5%2064b/badge.svg) |
+[20-12-30-18 ](https://github.com/asistex/hmg_tools_compilation/raw/main/bin/hmg35_uni_64b_mgw102r5_20201230-18.zip) | HMG 35 libs + Harbour 34 without Mingw binaries, without Harbour binaries. Compiled with mingw version gcc-10.2.0 llvm-11.0.0 mingw-w64-8.0.0-r5 | [`HMG lastest on github`](https://github.com/asistex/hmg_tools_compilation/raw/main/bin/hmg35_uni_64b_mgw102r5_20201230-18.zip) ![hmg35 64b unicode mgw102r5](https://github.com/asistex/hmg_tools_compilation/workflows/hmg35%2064b%20unicode%20mgw102r5/badge.svg) |
+[20-12-18-00 ](https://github.com/brechtsanders/winlibs_mingw/releases/download/10.2.0-11.0.0-8.0.0-r5/winlibs-x86_64-posix-seh-gcc-10.2.0-llvm-11.0.0-mingw-w64-8.0.0-r5.zip) | from winlibs_mingw mingw version x86_64-posix-seh gcc-10.2.0-llvm 11.0.0-mingw-w64-8.0.0-r5 | [`mingw version gcc-10.2.0 llvm-11.0.0 mingw-w64-8.0.0-r5`](https://github.com/brechtsanders/winlibs_mingw/releases/download/10.2.0-11.0.0-8.0.0-r5/winlibs-x86_64-posix-seh-gcc-10.2.0-llvm-11.0.0-mingw-w64-8.0.0-r5.zip)
+
 
 ---
 If you want to collaborate or if you find a problem or bug report, open an **`Issue`**
