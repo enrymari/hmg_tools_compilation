@@ -33,7 +33,7 @@ jobs:
       run: |
         cd HMG-Official\hmg
         set path=c:\mingw64\mingw64\bin;c:\harbour\bin;%path%
-        BuildAllLib64.bat
+        _BuildAllLib64.bat
         echo creating hmg libraries ErrorLevel = %ERRORLEVEL%
 
     - name: Create output folders ...
