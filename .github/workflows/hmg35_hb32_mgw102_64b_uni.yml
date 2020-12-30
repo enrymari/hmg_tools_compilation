@@ -1,0 +1,96 @@
+name: hmg35 32b unicode mgw102r5
+
+on:
+  push:
+    branches:
+      - 'master'
+      - 'main'
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    if: github.actor == github.event.repository.owner.login
+
+    steps:
+    - name: Checkout HMG-Official repo
+      uses: actions/checkout@v2
+      with:
+       repository: HMG-Official/HMG
+       path: HMG-Official/HMG
+
+    - name: Install dependencies
+      run: |
+        (new-object System.Net.WebClient).DownloadFile('https://github.com/brechtsanders/winlibs_mingw/releases/download/10.2.0-11.0.0-8.0.0-r5/winlibs-x86_64-posix-seh-gcc-10.2.0-llvm-11.0.0-mingw-w64-8.0.0-r5.zip', 'C:\temp\mingw64.zip')
+        Expand-Archive -LiteralPath C:\temp\mingw64.zip -DestinationPath C:\mingw64 -Force
+        (new-object System.Net.WebClient).DownloadFile('https://github.com/asistex/hmg_tools_compilation/raw/main/bin/hb32_mgw102r5_64b_20201230-17.zip', 'C:\temp\harbour.zip')
+        Expand-Archive -LiteralPath C:\temp\harbour.zip -DestinationPath C:\harbour -Force
+        gcc --version
+        c:\harbour\bin\harbour -build
+
+    - name: Building HMG ...
+      shell: cmd
+      run: |
+        cd HMG-Official\hmg
+        set path=c:\mingw64\mingw32\bin;c:\harbour\bin;%path%
+        BuildAllLib32.bat
+        echo creating hmg libraries ErrorLevel = %ERRORLEVEL%
+
+    - name: Create output folders ...
+      shell: cmd
+      run: |
+        mkdir output
+
+        : robocopy c:\harbour output\harbour /E
+        : if %ERRORLEVEL% EQU 1 set ERRORLEVEL=0
+        : echo %ERRORLEVEL%
+        : echo creating harbour binaries ErrorLevel = %ERRORLEVEL%
+
+        mkdir output\include
+        mkdir output\lib
+        mkdir output\resources
+        echo creating output folders ErrorLevel = %ERRORLEVEL%
+
+        robocopy HMG-Official\hmg\source output\source /E
+        if %ERRORLEVEL% EQU 1 set ERRORLEVEL=0
+        echo %ERRORLEVEL%
+        echo creating hmg source ErrorLevel = %ERRORLEVEL%
+
+        move HMG-Official\hmg\include\*.* output\include
+        echo creating output\include ErrorLevel = %ERRORLEVEL%
+        move HMG-Official\hmg\lib\*.* output\lib
+        echo creating output\lib ErrorLevel = %ERRORLEVEL%
+        move HMG-Official\hmg\resources\*.* output\resources
+        echo creating output\resources ErrorLevel = %ERRORLEVEL%
+
+        robocopy HMG-Official\hmg\doc output\doc /E
+        if %ERRORLEVEL% EQU 1 set ERRORLEVEL=0
+        echo %ERRORLEVEL%
+        echo creating hmg doc ErrorLevel = %ERRORLEVEL%
+
+        robocopy HMG-Official\hmg\hfcl output\hfcl /E
+        if %ERRORLEVEL% EQU 1 set ERRORLEVEL=0
+        echo %ERRORLEVEL%
+        echo creating hmg hfcl ErrorLevel = %ERRORLEVEL%
+
+        robocopy HMG-Official\hmg\samples output\samples /E
+        if %ERRORLEVEL% EQU 1 set ERRORLEVEL=0
+        echo %ERRORLEVEL%
+        echo creating hmg samples ErrorLevel = %ERRORLEVEL%
+
+        copy HMG-Official\hmg\*.* output\
+
+    - name: Get current time
+      uses: srfrnk/current-time@master
+      id: current-time
+      with:
+        format: YYYYMMDD-HH
+
+    - name: Create artifact
+      env:
+        F_TIME: "${{ steps.current-time.outputs.formattedTime }}"
+      uses: actions/upload-artifact@v2
+      with:
+        name: hmg35_uni_32b_mgw102r5_${{ env.F_TIME }}
+        path: output
+
