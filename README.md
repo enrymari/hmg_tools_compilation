@@ -48,6 +48,9 @@ If you want to collaborate or if you find a problem or bug report, open an **`Is
 
 ---
 ## notes
+
+Curl and libSSL binaries from https://curl.se/windows/ are added to output folders.
+
 ```
    curl 7.73.0_1 was built and statically linked with Opn SSL 1.1.1h
    https://github.com/curl/curl-for-win
