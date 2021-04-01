@@ -90,7 +90,7 @@ jobs:
         rmdir output\src\rtl\gtstd\obj /S /Q
         rmdir output\src\rdd\usrrdd\rdds\obj /S /Q
         echo clean objects 1
-        move output\lib\3rd\win\mingw\libunicow*.* output\lib\win\mingw
+        :: move output\lib\3rd\win\mingw64\libunicow*.* output\lib\win\mingw
         rmdir output\lib\3rd /S /Q
         echo clean objects 1-2
         rmdir output\src\vm\obj /S /Q
