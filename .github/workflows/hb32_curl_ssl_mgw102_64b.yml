@@ -38,33 +38,38 @@ jobs:
         set HB_USER_PRGFLAGS=-l-
         set HB_BUILD_PARTS=all
         set HB_BUILD_CONTRIBS=
-         set HB_WITH_OPENSSL=c:\openssl\include
-        set HB_WITH_CURL=c:\curl\include
-        set HB_WITH_ADS=c:\acesdk
+        :: set HB_WITH_OPENSSL=c:\openssl\include
+        :: set HB_WITH_CURL=c:\curl\include
+        :: set HB_WITH_ADS=c:\acesdk
         set HB_STATIC_OPENSSL=yes
         set HB_STATIC_CURL=yes
         set HB_COMPILER=mingw64
         set HB_BUILD_CONTRIB_DYN=yes
         set HB_BUILD_DYN=yes
         set HB_WITH_LIBHARU=c:\harbour\contrib\hbhpdf
-        set path=c:\mingw32\mingw32\bin;c:\openssl\bin;c:\curl;%path%
+        :: set path=c:\mingw32\mingw32\bin;c:\openssl\bin;c:\curl;%path%
+        set path=c:\mingw\mingw64\bin;%path%
         win-make.exe
     - name: Create output folders
       shell: cmd
       run: |
         mkdir output
+        
         echo adding curl 7.76 to harbour binaries
         robocopy C:\curl776\curl-7.76.0-win64-mingw\ output\curl_776 /E
         if %ERRORLEVEL% EQU 1 set ERRORLEVEL=0
         echo adding curl ErrorLevel = %ERRORLEVEL%
+        
         echo adding openssl 1.1.1 to harbour binaries
         robocopy C:\openssl_111\openssl-1.1.1k-win64-mingw\ output\openssl_111 /E
         if %ERRORLEVEL% EQU 1 set ERRORLEVEL=0
         echo adding openssl ErrorLevel = %ERRORLEVEL%
+        
         robocopy harbour\ output /E
         if %ERRORLEVEL% EQU 1 set ERRORLEVEL=0
         echo %ERRORLEVEL%
         echo creating harbour binaries ErrorLevel = %ERRORLEVEL%
+        
         rmdir output\.git /S /Q
         del output\.git* /S /Q
         del output\os2-make.exe /S /Q
@@ -75,9 +80,9 @@ jobs:
         rmdir output\debian /S /Q
         rmdir output\config /S /Q
         rmdir output\addons /S /Q
-        rmdir output\lib\win\mingw\.hbmk /S /Q
-        echo clean objects 0
-        move output\bin\win\mingw\*.* output\bin
+        rmdir output\lib\win\mingw64\.hbmk /S /Q
+        echo clean objects
+        move output\bin\win\mingw64\*.* output\bin
         rmdir output\bin\win /S /Q
         echo mover harbour binaries ErrorLevel = %ERRORLEVEL%
         rmdir output\src\rtl\gtwin\obj /S /Q
@@ -140,8 +145,11 @@ jobs:
         echo clean objects 18
         rmdir output\utils\hbmk2\obj /S /Q
         rmdir output\utils\hbi18n\obj /S /Q
+        
         echo end clean objects
+        
         if %ERRORLEVEL% EQU 1 set ERRORLEVEL=0
+        
     - name: Get current time
       uses: srfrnk/current-time@master
       id: current-time
