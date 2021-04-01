@@ -79,7 +79,7 @@ jobs:
         rmdir output\config /S /Q
         rmdir output\addons /S /Q
         rmdir output\lib\win\mingw64\.hbmk /S /Q
-        echo limpiar objects
+        echo clean objects
         move output\bin\win\mingw64\*.* output\bin
         rmdir output\bin\win /S /Q
         rmdir output\src\rtl\gtwin\obj /S /Q
@@ -123,7 +123,7 @@ jobs:
         rmdir output\utils\hbtest\obj /S /Q
         rmdir output\utils\hbmk2\obj /S /Q
         rmdir output\utils\hbi18n\obj /S /Q
-        echo fin limpiar objects
+        echo end clean objects
 
         if %ERRORLEVEL% EQU 1 set ERRORLEVEL=0
 
