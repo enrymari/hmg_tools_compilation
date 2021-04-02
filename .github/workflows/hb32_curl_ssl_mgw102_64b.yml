@@ -42,12 +42,14 @@ jobs:
         set HB_WITH_CURL=c:\curl776\curl-7.76.0-win64-mingw\include
         set HB_WITH_ADS=c:\acesdk
         set HB_STATIC_OPENSSL=yes
+        set HB_OPENSSL_STATIC=yes
         set HB_STATIC_CURL=yes
         set HB_COMPILER=mingw64
-        :: set HB_BUILD_CONTRIB_DYN=yes
-        :: set HB_BUILD_DYN=yes
+        set HB_BUILD_CONTRIB_DYN=yes
+        set HB_BUILD_DYN=yes
         set HB_WITH_LIBHARU=c:\harbour\contrib\hbhpdf
         :: set path=c:\mingw32\mingw32\bin;c:\openssl\bin;c:\curl;%path%
+        set HB_USER_CFLAGS="-cflag=-DHB_OPENSSL_STATIC"
         set path=c:\mingw\mingw64\bin;c:\openssl_111\openssl-1.1.1k-win64-mingw\bin;c:\curl776\curl-7.76.0-win64-mingw\bin;%path%
         win-make.exe
     - name: Create output folders
