@@ -1,9 +1,9 @@
-name: name: Harbour 32 MinGW 102 32b
+name: Harbour 32 MinGW 102 32b
 
 # Controls when the action will run. 
 on:
   # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
+  [workflow_dispatch]
 
 jobs:
   build:
