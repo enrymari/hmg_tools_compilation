@@ -1,7 +1,7 @@
 name: Harbour bins, dlls, curl, ssl 64b MinGW 10.2
 
 on:
-  [push]
+  [workflow_dispatch]
   
 jobs:
   build:
