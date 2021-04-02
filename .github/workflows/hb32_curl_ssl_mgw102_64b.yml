@@ -49,7 +49,7 @@ jobs:
         set HB_BUILD_DYN=yes
         set HB_WITH_LIBHARU=c:\harbour\contrib\hbhpdf
         :: set path=c:\mingw32\mingw32\bin;c:\openssl\bin;c:\curl;%path%
-        set HB_USER_CFLAGS="-cflag=-DHB_OPENSSL_STATIC"
+        set HB_USER_CFLAGS=-cflag=-DHB_OPENSSL_STATIC
         set path=c:\mingw\mingw64\bin;c:\openssl_111\openssl-1.1.1k-win64-mingw\bin;c:\curl776\curl-7.76.0-win64-mingw\bin;%path%
         win-make.exe
     - name: Create output folders
