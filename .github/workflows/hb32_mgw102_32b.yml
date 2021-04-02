@@ -20,17 +20,17 @@ jobs:
 
     - name: Install dependencies
       run: |
-        (new-object System.Net.WebClient).DownloadFile('https://github.com/brechtsanders/winlibs_mingw/releases/download/10.2.0-11.0.0-8.0.0-r5/winlibs-i686-posix-dwarf-gcc-10.2.0-llvm-11.0.0-mingw-w64-8.0.0-r5.zip', 'C:\temp\mingw32.zip')
+        (new-object System.Net.WebClient).DownloadFile('https://github.com/brechtsanders/winlibs_mingw/releases/download/10.2.0-11.0.0-8.0.0-r8/winlibs-i686-posix-dwarf-gcc-10.2.0-llvm-11.0.0-mingw-w64-8.0.0-r8.zip', 'C:\temp\mingw32.zip')
         Expand-Archive -LiteralPath C:\temp\mingw32.zip -DestinationPath C:\mingw32 -Force
-         (new-object System.Net.WebClient).DownloadFile('https://github.com/asistex/hmg_tools_compilation/raw/main/bin/OpenSSL-Win32.zip', 'C:\temp\OpenSSL-Win32.zip')
+        (new-object System.Net.WebClient).DownloadFile('https://github.com/asistex/hmg_tools_compilation/raw/main/bin/OpenSSL-Win32.zip', 'C:\temp\OpenSSL-Win32.zip')
         Expand-Archive -LiteralPath C:\temp\OpenSSL-Win32.zip -DestinationPath C:\OpenSSL -Force
-         (new-object System.Net.WebClient).DownloadFile('https://github.com/asistex/hmg_tools_compilation/raw/main/bin/curl-7.54.0-win32-mingw.zip', 'C:\temp\curl-7.54.0-win32-mingw.zip')
+        (new-object System.Net.WebClient).DownloadFile('https://github.com/asistex/hmg_tools_compilation/raw/main/bin/curl-7.54.0-win32-mingw.zip', 'C:\temp\curl-7.54.0-win32-mingw.zip')
         Expand-Archive -LiteralPath C:\temp\curl-7.54.0-win32-mingw.zip -DestinationPath C:\curl -Force
-         (new-object System.Net.WebClient).DownloadFile('https://github.com/asistex/hmg_tools_compilation/raw/main/bin/acesdk.zip', 'C:\temp\acesdk.zip')
+        (new-object System.Net.WebClient).DownloadFile('https://github.com/asistex/hmg_tools_compilation/raw/main/bin/acesdk.zip', 'C:\temp\acesdk.zip')
         Expand-Archive -LiteralPath C:\temp\acesdk.zip -DestinationPath C:\acesdk -Force
-         (new-object System.Net.WebClient).DownloadFile('https://github.com/asistex/hmg_tools_compilation/raw/main/bin/curl-7.73.0_1-win32-mingw.zip', 'C:\temp\curl773.zip')
-        Expand-Archive -LiteralPath C:\temp\curl773.zip -DestinationPath C:\curl773 -Force
-         (new-object System.Net.WebClient).DownloadFile('https://github.com/asistex/hmg_tools_compilation/raw/main/bin/openssl-1.1.1h_1-win32-mingw.zip', 'C:\temp\openssl_111.zip')
+        (new-object System.Net.WebClient).DownloadFile('https://curl.se/windows/dl-7.76.0/curl-7.76.0-win32-mingw.zip', 'C:\temp\curl776.zip')
+        Expand-Archive -LiteralPath C:\temp\curl776.zip -DestinationPath C:\curl776 -Force
+         (new-object System.Net.WebClient).DownloadFile('https://curl.se/windows/dl-7.76.0/openssl-1.1.1k-win32-mingw.zip', 'C:\temp\openssl_111.zip')
         Expand-Archive -LiteralPath C:\temp\openssl_111.zip -DestinationPath C:\openssl_111 -Force
     - name: Compile Harbour
       shell: cmd
@@ -55,12 +55,12 @@ jobs:
       shell: cmd
       run: |
         mkdir output
-        echo adding curl 7.73 to harbour binaries
-        robocopy C:\curl773\curl-7.73.0-win32-mingw\ output\curl_773 /E
+        echo adding curl 7.76 to harbour binaries
+        robocopy C:\curl776\curl-7.76.0-win32-mingw\ output\curl_776 /E
         if %ERRORLEVEL% EQU 1 set ERRORLEVEL=0
         echo adding curl ErrorLevel = %ERRORLEVEL%
         echo adding openssl 1.1.1 to harbour binaries
-        robocopy C:\openssl_111\openssl-1.1.1h-win32-mingw\ output\openssl_111 /E
+        robocopy C:\openssl_111\openssl-1.1.1k-win32-mingw\ output\openssl_111 /E
         if %ERRORLEVEL% EQU 1 set ERRORLEVEL=0
         echo adding openssl ErrorLevel = %ERRORLEVEL%
         robocopy harbour\ output /E
