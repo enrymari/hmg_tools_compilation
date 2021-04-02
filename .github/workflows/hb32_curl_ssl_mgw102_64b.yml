@@ -20,10 +20,10 @@ jobs:
       run: |
         (new-object System.Net.WebClient).DownloadFile('https://github.com/brechtsanders/winlibs_mingw/releases/download/10.2.0-11.0.0-8.0.0-r8/winlibs-x86_64-posix-seh-gcc-10.2.0-llvm-11.0.0-mingw-w64-8.0.0-r8.zip', 'C:\temp\mingw.zip')
         Expand-Archive -LiteralPath C:\temp\mingw.zip -DestinationPath C:\mingw -Force
-        (new-object System.Net.WebClient).DownloadFile('https://github.com/asistex/hmg_tools_compilation/raw/main/bin/OpenSSL-Win32.zip', 'C:\temp\OpenSSL-Win32.zip')
-        Expand-Archive -LiteralPath C:\temp\OpenSSL-Win32.zip -DestinationPath C:\OpenSSL -Force
-        (new-object System.Net.WebClient).DownloadFile('https://github.com/asistex/hmg_tools_compilation/raw/main/bin/curl-7.54.0-win32-mingw.zip', 'C:\temp\curl-7.54.0-win32-mingw.zip')
-        Expand-Archive -LiteralPath C:\temp\curl-7.54.0-win32-mingw.zip -DestinationPath C:\curl -Force
+        :: (new-object System.Net.WebClient).DownloadFile('https://github.com/asistex/hmg_tools_compilation/raw/main/bin/OpenSSL-Win32.zip', 'C:\temp\OpenSSL-Win32.zip')
+        :: Expand-Archive -LiteralPath C:\temp\OpenSSL-Win32.zip -DestinationPath C:\OpenSSL -Force
+        :: (new-object System.Net.WebClient).DownloadFile('https://github.com/asistex/hmg_tools_compilation/raw/main/bin/curl-7.54.0-win32-mingw.zip', 'C:\temp\curl-7.54.0-win32-mingw.zip')
+        :: Expand-Archive -LiteralPath C:\temp\curl-7.54.0-win32-mingw.zip -DestinationPath C:\curl -Force
         (new-object System.Net.WebClient).DownloadFile('https://github.com/asistex/hmg_tools_compilation/raw/main/bin/acesdk.zip', 'C:\temp\acesdk.zip')
         Expand-Archive -LiteralPath C:\temp\acesdk.zip -DestinationPath C:\acesdk -Force
         (new-object System.Net.WebClient).DownloadFile('https://curl.se/windows/dl-7.76.0/curl-7.76.0-win64-mingw.zip', 'C:\temp\curl776.zip')
@@ -38,9 +38,9 @@ jobs:
         set HB_USER_PRGFLAGS=-l-
         set HB_BUILD_PARTS=all
         set HB_BUILD_CONTRIBS=
-        :: set HB_WITH_OPENSSL=c:\openssl\include
-        :: set HB_WITH_CURL=c:\curl\include
-        :: set HB_WITH_ADS=c:\acesdk
+        set HB_WITH_OPENSSL=c:\openssl_111\openssl-1.1.1k-win64-mingw\include
+        set HB_WITH_CURL=c:\curl776\curl-7.76.0-win64-mingw\include
+        set HB_WITH_ADS=c:\acesdk
         set HB_STATIC_OPENSSL=yes
         set HB_STATIC_CURL=yes
         set HB_COMPILER=mingw64
@@ -48,7 +48,7 @@ jobs:
         set HB_BUILD_DYN=yes
         set HB_WITH_LIBHARU=c:\harbour\contrib\hbhpdf
         :: set path=c:\mingw32\mingw32\bin;c:\openssl\bin;c:\curl;%path%
-        set path=c:\mingw\mingw64\bin;%path%
+        set path=c:\mingw\mingw64\bin;c:\openssl_111\openssl-1.1.1k-win64-mingw\bin;c:\curl776\curl-7.76.0-win64-mingw\bin;%path%
         win-make.exe
     - name: Create output folders
       shell: cmd
